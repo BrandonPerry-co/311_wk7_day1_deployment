@@ -5,11 +5,15 @@ const router = express.Router()
 
 router.get('/', authenticate, usersController.getAllUsers)
 
-router.get('/:id', authenticate, usersController.getUserById)
+router.get('/user', authenticate, usersController.getAllUsers)
 
-router.post('/', authenticate, usersController.createUser)
+router.get('/login', authenticate, usersController.getUserById)
 
-router.put('/:id', authenticate, usersController.updateUserById)
+router.post('/signup', authenticate, usersController.createUser)
+
+router.post('/workout', authenticate, usersController.createWorkout)
+
+router.put('/bodycomp', authenticate, usersController.updateUserById)
 
 router.delete('/:first_name', authenticate, usersController.deleteUserByFirstName)
 

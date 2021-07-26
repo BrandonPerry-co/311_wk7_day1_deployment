@@ -13,7 +13,27 @@ app.use('/users', usersRouter)
 app.use('/auth', authRouter)
 
 app.get('/', (req, res) => {
-  res.send('Welcome to Fit-Pro!')
+  res.send('Welcome to Fit-Pro 1!')
+})
+
+app.get('/user', (req, res) => {
+  res.send('Welcome to Fit-Pro 22222!')
+})
+
+app.get('/login', (req, res) => {
+  res.json('Welcome back to Fit-Pro!');
+})
+
+app.post('/workout', (req, res) => {
+  res.send('Your work has been posted!')
+})
+
+app.post('/signup', (req, res) => {
+  res.send('Sign up today and experiance change like no other!')
+})
+
+app.put('/bodycomp', (req, res) => {
+  res.send('Your body comp has been updated!')
 })
 
 app.listen(port, () => {
